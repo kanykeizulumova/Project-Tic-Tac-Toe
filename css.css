@@ -1,0 +1,30 @@
+body {
+
+    border: 1px solid black;
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid grey;
+  background: lightyellow;
+  height: 80px;
+  width: 504px;
+  
+}
+
+div.board {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid black;
+  gap: 2px;
+  padding: 2px;
+  background-color: yellow;
+  cursor: pointer;
+}
