@@ -115,7 +115,7 @@ const displayController = (function () {
     } else if (roundStatus === "continue") {
       renderBoard();
       let playerInfo = GameController.getCurrentPlayer();
-      playerName.textContent = `${playerName.name}'s turn`;
+      playerName.textContent = `${playerInfo.name}'s turn`;
     } else if (roundStatus === "invalid") {
       warningDiv.textContent = "Choose another cell";
     }
@@ -138,6 +138,7 @@ const displayController = (function () {
     renderBoard();
     gameResult.textContent = "";
     warningDiv.textContent = "";
+    playerName.textContent = "";
   });
 
   startButton.addEventListener("click", function () {

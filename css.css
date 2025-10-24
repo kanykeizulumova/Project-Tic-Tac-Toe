@@ -1,6 +1,13 @@
 body {
-
-    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("istockphoto-1366498928-1024x1024.jpg");
+    background-size: contain;
+    background-position:0cap;
+    background-attachment: fixed;
 }
 h1 {
     text-align: center;
@@ -43,7 +50,7 @@ div.container {
   text-align: center;
   font-size: 1rem;
   border: 1px solid grey;
-  background: lightyellow;
+  background: rgb(217, 224, 228);
   height: 80px;
   width: 504px;
   border-radius: 10px;
@@ -59,7 +66,7 @@ div.board {
   border: 1px solid black;
   gap: 2px;
   padding: 2px;
-  background-color: rgb(46, 223, 194);
+  background-color: rgb(214, 232, 236);
   cursor: pointer;
   border-radius: 10px;
 }
@@ -71,6 +78,8 @@ p.warning {
   border: 1px solid grey;
   border-radius: 8px;
   width: 500px;
+  font-weight: 900;
+  text-align: center;
 }
 #favDialog {
   border: none;
