@@ -25,6 +25,51 @@
       <button class = "cell nine" data-index="8"></button>
     </div>
     <p class = "warning"></p>
+
+    <div class = resetGame>
+      <button class="start"> Start game</button>
+      <button class="reset"> Reset game</button>
+    <dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p>
+        <label for="playerone">Player 1 name:</label>
+        <input id = nameone type="text" name="nameone" required></input>
+      </p>
+    </section>
+    <section>
+      <p>
+        <label for="symbol">Choose your symbol:</label>
+        <select id="symbolone">
+          <option></option>
+          <option>X</option>
+          <option>O</option>
+        </select>
+      </p>
+    </section>
+    <section>
+      <p>
+        <label for="playertwo">Player 2 name:</label>
+        <input id = nametow type="text" name="nametow" required></input>
+      </p>
+    </section>
+    
+    <section>
+      <p>
+        <label for="symbol">Choose your symbol:</label>
+        <select id="symboltwo">
+          <option></option>
+          <option>X</option>
+          <option>O</option>
+        </select>
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="cancel">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

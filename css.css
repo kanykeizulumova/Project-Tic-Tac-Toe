@@ -2,6 +2,39 @@ body {
 
     border: 1px solid black;
 }
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+}
+button.start {   
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  background-color: #bbdbd9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button.start.hover {
+    background-color: #11c9bd;
+}
+button.reset {   
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  background-color: #dbb325;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button.reset.hover {
+    background-color: #efc109;
+}
 
 div.container {
   display: flex;
@@ -13,6 +46,7 @@ div.container {
   background: lightyellow;
   height: 80px;
   width: 504px;
+  border-radius: 10px;
   
 }
 
@@ -25,6 +59,69 @@ div.board {
   border: 1px solid black;
   gap: 2px;
   padding: 2px;
-  background-color: yellow;
+  background-color: rgb(46, 223, 194);
   cursor: pointer;
+  border-radius: 10px;
+}
+
+button.cell {
+  border-radius: 8px;
+}
+p.warning {
+  border: 1px solid grey;
+  border-radius: 8px;
+  width: 500px;
+}
+#favDialog {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  min-width: 400px;
+}
+
+#favDialog form {
+  display: flex;
+  flex-direction: column;
+}
+
+#favDialog form section {
+  display: flex;
+  flex-direction: column;
+}
+#favDialog form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+#favDialog form input[type="text"],
+#favDialog form select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+#favDialog form menu {
+  display: flex;
+  justify-content: center; 
+  gap: 3rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+#favDialog form menu button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#favDialog button[type="submit"] {
+  background-color: #2ecc71; 
+  color: white;
+}
+
+#favDialog #cancel {
+  background-color: #ecf0f1; 
+  color: #333;
 }
