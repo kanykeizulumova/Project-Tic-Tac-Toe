@@ -1,10 +1,11 @@
 let board = ["", "", "", "", "", "", "", "", ""];
-
 let currentPlayer = "X";
+let isGameContinuing = true;
 const boardDiv = document.querySelector(".board");
 const playerName = document.querySelector(".playerName");
 const warningDiv = document.querySelector(".warning");
 const gameResult = document.querySelector(".gameResult");
+playerName.textContent = `${currentPlayer}'s turn`;
 
 function renderBoard() {
   for (let i = 0; i < board.length; i++) {
@@ -19,7 +20,7 @@ renderBoard();
 boardDiv.addEventListener("click", (e) => {
   const clickedCell = e.target;
   let index = e.target.dataset.index;
-  if (board[index] === "") {
+  if (board[index] === "" && isGameContinuing) {
     board[index] = currentPlayer;
     const winningCombinations = [
       [0, 1, 2],
@@ -36,25 +37,30 @@ boardDiv.addEventListener("click", (e) => {
       const [a, b, c] = combination;
       if (board[a] == board[b] && board[b] == board[c] && board[a] !== "") {
         gameResult.textContent = `Conglatulations ${currentPlayer}, you win!`;
+        isGameContinuing = false;
       }
     }
     if (board.every((cell) => cell !== "")) {
       gameResult.textContent = `It's a tie`;
+      isGameContinuing = false;
     }
 
-    switch (currentPlayer) {
-      case "X":
-        currentPlayer = "O";
-        break;
-      case "O":
-        currentPlayer = "X";
-        break;
+    if (isGameContinuing === true) {
+      switch (currentPlayer) {
+        case "X":
+          currentPlayer = "O";
+          break;
+        case "O":
+          currentPlayer = "X";
+          break;
+      }
     }
   } else {
     warningDiv.textContent = "Choose another cell";
   }
-
-  playerName.textContent = `${currentPlayer}'s turn`;
+  if (isGameContinuing) {
+    playerName.textContent = `${currentPlayer}'s turn`;
+  }
 
   renderBoard();
 });
